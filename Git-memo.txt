@@ -1,0 +1,38 @@
+﻿Git 설치
+	https://git-scm.com/ 다운로드설치
+	설치경로 : D:\Program Files\Git
+	Git파일 : Git-2.11.1-64-bit.exe (2017-02-02)
+SourceTree 설치
+	https://www.sourcetreeapp.com/ 다운로드설치
+	파일 : SourceTreeSetup-1.10.15.4.exe (2017-02-06)
+	설치경로 : D:\Program Files (x86)\Atlassian\SourceTree
+SourceTree 사용
+	도구 > 일반 > Repo Settings > 언어 > English로 변경 > 프로그램 재시작
+	저장소 만들기
+		왼쪽 하단 + 버튼(Add Repository) 클릭
+		Add Repository > Create New repository > 디렉토리 선택(D:\MYSPACE\Git\git_tutorial)
+	커밋
+		신규저장소에 새로운 파일을 만들면 Uncommitted changes 가 생김
+		누르면 Unstaged files에 파일이 보임
+		unstaged -> staged -> commit -> 새로운 버전이 생김
+	원격저장소
+		로컬저장소를 백업
+		원격저장소의 종류
+			github.com 
+			gitlab.com - 서비설치 서버구축 제공
+			yobi.io 
+	GitHub
+		HTTPS	https://github.com/ncjang/git_tutorial.git
+		SSH		git@github.com:ncjang/git_tutorial.git
+	Repository > Add Remote
+		URL / Path : https://github.com/ncjang/git_tutorial.git
+		default remote체크
+		PUSH
+		PULL
+	Diff 도구 설정
+		Tool > Option > Diff > External Diff
+	Stash
+		안전한 곳에 보관해 두다
+		완성하지 않은 소스를 어딘가에 보관해 두는것
+
+	
