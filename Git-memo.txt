@@ -2,20 +2,59 @@
 	https://git-scm.com/ 다운로드설치
 	설치경로 : D:\Program Files\Git
 	Git파일 : Git-2.11.1-64-bit.exe (2017-02-02)
+
 SourceTree 설치
 	https://www.sourcetreeapp.com/ 다운로드설치
 	파일 : SourceTreeSetup-1.10.15.4.exe (2017-02-06)
 	설치경로 : D:\Program Files (x86)\Atlassian\SourceTree
+
 SourceTree 사용
 	도구 > 일반 > Repo Settings > 언어 > English로 변경 > 프로그램 재시작
+
 	저장소 만들기
 		왼쪽 하단 + 버튼(Add Repository) 클릭
 		Add Repository > Create New repository > 디렉토리 선택(D:\MYSPACE\Git\git_tutorial)
+
 	커밋
 		신규저장소에 새로운 파일을 만들면 Uncommitted changes 가 생김
 		누르면 Unstaged files에 파일이 보임
 		unstaged -> staged -> commit -> 새로운 버전이 생김
-	원격저장소
+	
+	Unstaged files : Working Directory, 수정한파일, Working Copys
+	ADD 클릭
+	Staged files : index, Staging Area, 버젼
+	COMMIT 클릭
+	저장소Repository
+
+	Discard : 수정사항 취소하기
+		Staged files을 대상으로
+		커밋하기전에 최종확인해서 리뷰하기
+
+	Reset : 되돌리기
+		커밋한 버전을 삭제해서 이전 상태로 되돌림
+		Branches에서 해당브랜치에서 마우스 우측
+		Reset current branch to this branch
+		Using mode: 
+			Hard - discard all working copy changes
+			Mixed - keep working copy  but reset index
+			Soft - keep all local changes
+	Revert
+		커밋한 버전을 취소해서 이전상태로 되돌림 버전상태는 유지
+		역순으로 하나씩 순차적으로 Reverse해야함 
+		Reverse Commit..
+
+	Branch
+		작업을 분기하는 것
+		브랜치 만들기 : Branch - Create Branch
+		브랜치 병합 : Merge branch1 into current branchs
+		브랜치 충돌
+			Conflict
+			각각의 브랜치에서 같은 곳을 수정할 때 병합시 충돌 발행
+			수정 후 Unstaged files에서 Resolve Conflicts - Mark Resolved
+		브랜치간의 충돌 해결
+ 			브랜치에서 작업시 작업전에 항상 master를 병합하여 충돌을 최소화 하면서 작업한다.
+
+ 	원격저장소
 		로컬저장소를 백업
 		원격저장소의 종류
 			github.com 
@@ -24,15 +63,37 @@ SourceTree 사용
 	GitHub
 		HTTPS	https://github.com/ncjang/git_tutorial.git
 		SSH		git@github.com:ncjang/git_tutorial.git
+
 	Repository > Add Remote
 		URL / Path : https://github.com/ncjang/git_tutorial.git
 		default remote체크
 		PUSH
 		PULL
+
+	원격저장소 복제
+		Add Repository > Clone Repository
+		다른 사랑자가 같은 원격저장소의 일을 할때 복제하여 사용함.
+		Author 변경하기
+			Terminal > 
+			NCJANG@NCJANG-PC MINGW64 /d/MYSPACE/Git/git_tutorial_leezche (master)
+			$ git config user.name "leezche"			
+			$ git config user.email "leezche@gmail.com"
+	
+	충돌해결 작업순서
+		PULL -> WORK -> COMMIT -> PULL -> PUSH
+		원격저장소를 자주 동기화해야 한다.
+
 	Diff 도구 설정
 		Tool > Option > Diff > External Diff
+
 	Stash
 		안전한 곳에 보관해 두다
 		완성하지 않은 소스를 어딘가에 보관해 두는것
 
-	
+Diff
+	difference의 약자로 파일과 파일의 차이점을 비교해주는 역할을 하는 소프트웨어를 의미한다. 
+	https://en.wikipedia.org/wiki/Comparison_of_file_comparison_tools
+	http://winmerge.org/ 무료
+	http://kdiff3.sourceforge.net/ 무료	
+	http://www.scootersoftware.com/ 유료
+
