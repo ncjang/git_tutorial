@@ -85,6 +85,7 @@ SourceTree 사용
 
 	Diff 도구 설정
 		Tool > Option > Diff > External Diff
+		비교하기 다시 공부하기???
 
 	Stash
 		안전한 곳에 보관해 두다
